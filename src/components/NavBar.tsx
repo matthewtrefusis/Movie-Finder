@@ -19,8 +19,8 @@ const NavBar = () => {
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
+          data-bs-target="#navbarSupportedContent" // fix target to match id
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
@@ -59,6 +59,37 @@ const NavBar = () => {
               >
                 Popular
               </NavLink>
+            </li>
+            <li className="nav-item dropdown">
+              <button
+                className="nav-link dropdown-toggle btn btn-link"
+                id="navbarDropdownMenuLink"
+                data-bs-toggle="dropdown" // Bootstrap 5
+                aria-expanded="false"
+                type="button"
+              >
+                Genres
+              </button>
+              <ul
+                className="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <NavLink className="dropdown-item" to="/genre/action">
+                    Action
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/genre/adventure">
+                    Adventure
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/genre/comedy">
+                    Comedy
+                  </NavLink>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>

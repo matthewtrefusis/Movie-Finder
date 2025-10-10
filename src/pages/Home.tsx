@@ -47,7 +47,7 @@ const Home = () => {
   return (
     <div className="Home">
       <nav className="navbar bg-body-tertiary">
-        <div className="container-fluid">
+        <div className="container-fluid justify-content-center">
           <form onSubmit={handleSearch} className="d-flex m-3" role="search">
             <input
               className="form-control me-2"

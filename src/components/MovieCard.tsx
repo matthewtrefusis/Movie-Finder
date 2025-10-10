@@ -43,7 +43,7 @@ function MovieCard({ movie }: { movie: Movie }) {
           className={`btn btn-light ${favorite ? "active" : ""}`}
           onClick={onFavoriteClick}
         >
-          ♥
+          ❤️
         </button>
       </div>
     </div>
