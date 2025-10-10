@@ -6,6 +6,13 @@ const NavBar = () => {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/">
+          <img
+            src="/play-button.svg"
+            alt="Logo"
+            width="30"
+            height="30"
+            className="d-inline-block align-text-top"
+          />
           Movie Finder
         </NavLink>
         <button
