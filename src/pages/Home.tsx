@@ -12,7 +12,7 @@ const Home = () => {
     const loadPopularMovies = async () => {
       try {
         const popularMovies = await getPopularMovies();
-        setMovies(popularMovies);
+        setMovies(popularMovies ?? []);
       } catch (err) {
         console.log(err);
         setError("Failed to load movies...");
@@ -32,7 +32,7 @@ const Home = () => {
     setLoading(true);
     try {
       const results = await searchMovies(searchTerm);
-      setMovies(results);
+      setMovies(results ?? []);
       setError(null);
     } catch (err) {
       console.log(err);
