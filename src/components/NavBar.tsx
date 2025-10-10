@@ -85,8 +85,91 @@ const NavBar = () => {
                   </NavLink>
                 </li>
                 <li>
+                  <NavLink className="dropdown-item" to="/genre/animation">
+                    Animation
+                  </NavLink>
+                </li>
+                <li>
                   <NavLink className="dropdown-item" to="/genre/comedy">
                     Comedy
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/genre/crime">
+                    Crime
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/genre/documentary">
+                    Documentary
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/genre/drama">
+                    Drama
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/genre/family">
+                    Family
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/genre/fantasy">
+                    Fantasy
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/genre/history">
+                    History
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/genre/horror">
+                    Horror
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/genre/music">
+                    Music
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/genre/mystery">
+                    Mystery
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/genre/romance">
+                    Romance
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    className="dropdown-item"
+                    to="/genre/science-fiction"
+                  >
+                    Science Fiction
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/genre/tv-movie">
+                    TV Movie
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/genre/thriller">
+                    Thriller
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/genre/war">
+                    War
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="dropdown-item" to="/genre/western">
+                    Western
                   </NavLink>
                 </li>
               </ul>
