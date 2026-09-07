@@ -1,70 +1,115 @@
-﻿# Movie-Finder
+# Movie Finder
 
-A responsive movie browser built with React, Vite, TypeScript, and Bootstrap. It fetches data from The Movie Database (TMDB) and lets you browse Popular titles, search, explore by Genre, and save favourites (persisted to localStorage).
+[![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.x-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+
+A responsive movie browser built with React, Vite, TypeScript, and Bootstrap. It uses The Movie Database (TMDB) API to browse popular films, search by title, explore by genre, and save favourites locally using `localStorage`.
+
+## Screenshots
+
+<img width="2559" height="1309" alt="image" src="https://github.com/user-attachments/assets/4a3ac919-38d9-4271-b37a-b9e15d41b440" />
+
+<img width="2559" height="1307" alt="image" src="https://github.com/user-attachments/assets/da992290-2f0a-485e-b9b8-e5ddbd5ec0fd" />
+
+<img width="2559" height="1308" alt="image" src="https://github.com/user-attachments/assets/ae0c51cf-6e10-47a3-b9a4-638416aa26a4" />
+
 
 ## Features
 
-- React + TypeScript + Vite
+- Browse popular movies from TMDB
+- Search for movies by title
+- Explore movies by genre
+- Save and remove favourites
+- Persist favourites across page reloads with `localStorage`
+- Responsive UI built with Bootstrap 5
 - Client-side routing with React Router
-- Bootstrap 5 styles and JS (dropdowns, collapse)
-- Popular movies listing
-- Search movies by title
-- Browse by genre (many genres supported via a single reusable page)
-- Favourites: add/remove from any card; persisted across reloads
 
-## Project Structure
+## Tech Stack
 
-- `src/components/MovieCard.tsx` — Card UI with favourite toggle
-- `src/components/NavBar.tsx` — Top navigation with dropdown genres
-- `src/contexts/MovieContext.tsx` — Favourites context (localStorage-backed)
-- `src/pages/Home.tsx` — Search + initial list
-- `src/pages/Popular.tsx` — Popular movies
-- `src/pages/Favourites.tsx` — Favourites grid
-- `src/pages/genre/GenrePage.tsx` — Reusable page for multiple genres
-- `src/services/api.ts` — API calls to TMDB
+- **Frontend:** React, TypeScript, Vite
+- **Styling:** Bootstrap 5
+- **Routing:** React Router
+- **API:** TMDB API
+- **Storage:** localStorage
 
-## Prerequisites
+## Getting Started
 
-- Node.js 16+ recommended
-- TMDB API key
+### Prerequisites
 
-## Setup
+- Node.js 16+
+- A TMDB API key
 
-1. Create a `.env` file from the example and set your TMDB key:
+### Installation
 
-```powershell
-Copy-Item .env.example .env
-# then edit .env and set VITE_TMDB_API_KEY=your_key_here
-```
+1. Clone the repository
 
-2. Install dependencies:
+   ```bash
+   git clone https://github.com/matthewtrefusis/Movie-Finder.git
+   cd Movie-Finder
+   ```
 
-```powershell
-npm install
-```
+2. Install dependencies
 
-3. Start the dev server:
+   ```bash
+   npm install
+   ```
 
-```powershell
-npm run dev
-```
+3. Create a `.env` file in the project root
 
-3. Open the app (Vite will print a local URL, typically http://localhost:5173).
+   ```bash
+   VITE_TMDB_API_KEY=your_tmdb_api_key_here
+   ```
 
-## Build & Preview
+4. Start the development server
 
-```powershell
+   ```bash
+   npm run dev
+   ```
+
+5. Open the app in your browser
+
+   - Vite will print the local URL, usually `http://localhost:5173`
+
+## Build for Production
+
+```bash
 npm run build
+```
+
+## Preview the Production Build
+
+```bash
 npm run preview
 ```
 
-## Environment & Configuration
+## Project Structure
 
-- Bootstrap CSS and JS bundle are imported in `src/main.tsx`.
-- React Router is configured in `src/main.tsx` and routes live in `src/App.tsx`.
-- Favourites are saved to `localStorage` under the key `favorites` and hydrated on app load.
-- Genre pages use TMDB's discover API via `getMoviesByGenre(genreId)`.
+- `src/components/MovieCard.tsx` — movie card UI and favourite toggle
+- `src/components/NavBar.tsx` — navigation and genre dropdown
+- `src/contexts/MovieContext.tsx` — favourites state and localStorage persistence
+- `src/pages/Home.tsx` — home page with search and popular movies
+- `src/pages/Popular.tsx` — popular movies page
+- `src/pages/Favourites.tsx` — saved favourites page
+- `src/pages/genre/GenrePage.tsx` — reusable genre browsing page
+- `src/services/api.ts` — TMDB API calls
 
+## Environment Variables
+
+The app requires:
+
+```bash
+VITE_TMDB_API_KEY
+```
+
+This key is used to fetch data from TMDB.
+
+## Notes
+
+- Bootstrap CSS and JS are imported in `src/main.tsx`
+- Routes are configured in `src/App.tsx`
+- Favourites are stored in `localStorage` under the key `favorites`
 
 ## License
 
